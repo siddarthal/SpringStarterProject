@@ -1,0 +1,11 @@
+package com.example.demo.aspect;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class BeforeAspect {
+	private Logger  logger =LoggerFactory.getLogger(this.getClass());
+	public void Before() {
+		logger.info("intercepted a method call");
+	}
+}

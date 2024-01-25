@@ -1,0 +1,10 @@
+package com.example.demo.dao;
+
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class Data2 {
+	public String retreiveSomething() {
+		return "data1";
+	}
+}

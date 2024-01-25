@@ -1,0 +1,24 @@
+package com.example.demo.aspect;
+
+import org.aspectj.lang.annotation.Aspect;
+
+import org.aspectj.lang.annotation.Before;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.context.annotation.Configuration;
+
+
+//Aop
+//Configuration
+@Aspect
+@Configuration
+public class BeforeAspect {
+	private Logger  logger =LoggerFactory.getLogger(this.getClass());
+//	what kind of methods i want to intercept
+//	(execution(* PACKAGE.*.*(..))
+	logger.info("hi");
+	@Before("execution(* com.example.demo.aspect.service.*.*(..))")
+	public void before() {
+		logger.info("intercepted a method call");
+	}
+}

@@ -1,0 +1,6 @@
+package com.example.aop.exception;
+
+public class ErrorDetails {
+	
+
+}

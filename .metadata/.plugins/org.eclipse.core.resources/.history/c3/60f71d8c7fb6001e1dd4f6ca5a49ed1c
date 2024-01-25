@@ -1,0 +1,29 @@
+package com.example.demo;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.example.demo.service.Service1;
+import com.example.demo.service.Service2;
+
+@SpringBootApplication
+public class TestingprojectOneApplication implements CommandLineRunner {
+	@Autowired
+	Service1 svc1;
+	@Autowired
+	Service2 svc2;
+	
+	public static void main(String[] args) {
+		SpringApplication.run(TestingprojectOneApplication.class, args);
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+		// TODO Auto-generated method stub
+		svc1.callFromDb();
+		svc2.callFromDb();
+	}
+
+}
